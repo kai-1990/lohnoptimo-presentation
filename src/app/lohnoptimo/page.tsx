@@ -1,14 +1,14 @@
 "use client";
 
 import { PasswordGate } from "@/components/PasswordGate";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { EcosystemSection } from "@/components/sections/EcosystemSection";
-import { RoadmapSection } from "@/components/sections/RoadmapSection";
-import { StrategySection } from "@/components/sections/StrategySection";
-import { GrowthChartSection } from "@/components/sections/GrowthChartSection";
-import { CapitalLogicSection } from "@/components/sections/CapitalLogicSection";
-import { EquityChartSection } from "@/components/sections/EquityChartSection";
-import { ClosingSection } from "@/components/sections/ClosingSection";
+import { HeroSection } from "@/components/lohnoptimo_businessplan/HeroSection";
+import { EcosystemSection } from "@/components/lohnoptimo_businessplan/EcosystemSection";
+import { RoadmapSection } from "@/components/lohnoptimo_businessplan/RoadmapSection";
+import { StrategySection } from "@/components/lohnoptimo_businessplan/StrategySection";
+import { GrowthChartSection } from "@/components/lohnoptimo_businessplan/GrowthChartSection";
+import { CapitalLogicSection } from "@/components/lohnoptimo_businessplan/CapitalLogicSection";
+import { EquityChartSection } from "@/components/lohnoptimo_businessplan/EquityChartSection";
+import { ClosingSection } from "@/components/lohnoptimo_businessplan/ClosingSection";
 import { ScrollProgress } from "@/components/ScrollProgress";
 
 // SHA-256 Hash von "lohnoptimo26!"
