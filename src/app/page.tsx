@@ -1,40 +1,47 @@
-"use client";
+import Link from "next/link";
+import { Presentation } from "lucide-react";
 
-import { HeroSection } from "@/components/sections/HeroSection";
-import { EcosystemSection } from "@/components/sections/EcosystemSection";
-import { RoadmapSection } from "@/components/sections/RoadmapSection";
-import { StrategySection } from "@/components/sections/StrategySection";
-import { GrowthChartSection } from "@/components/sections/GrowthChartSection";
-import { CapitalLogicSection } from "@/components/sections/CapitalLogicSection";
-import { EquityChartSection } from "@/components/sections/EquityChartSection";
-import { ClosingSection } from "@/components/sections/ClosingSection";
-import { ScrollProgress } from "@/components/ScrollProgress";
+const presentations = [
+  {
+    title: "Lohnoptimo",
+    description: "Strategischer Relaunch & Ausfuehrungsplan",
+    href: "/lohnoptimo",
+  },
+];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#020617] text-slate-100 overflow-x-hidden selection:bg-sky-500/30 selection:text-sky-100">
-      <ScrollProgress />
+    <main className="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center px-4">
+      <div className="w-full max-w-2xl">
+        <h1 className="text-3xl font-bold text-center mb-2">
+          Praesentationen
+        </h1>
+        <p className="text-slate-400 text-center mb-12">
+          Antigravity Strategie-Decks
+        </p>
 
-      {/*
-        The cinematic scroll container.
-        Background gradients and global glows are handled per section to maintain the 'frameless' aesthetic.
-      */}
-
-      <HeroSection />
-
-      <div className="relative">
-        {/* Subtle unified vertical connecting line behind all sections */}
-        <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[1px] bg-gradient-to-b from-sky-900/10 via-slate-800/20 to-indigo-900/10 -z-20 hidden md:block" />
-
-        <EcosystemSection />
-        <RoadmapSection />
-        <StrategySection />
-        <GrowthChartSection />
-        <CapitalLogicSection />
-        <EquityChartSection />
-        <ClosingSection />
+        <div className="grid gap-4">
+          {presentations.map((p) => (
+            <Link
+              key={p.href}
+              href={p.href}
+              className="group block p-6 bg-slate-900/50 border border-slate-800 rounded-2xl hover:border-sky-500/40 hover:bg-slate-900 transition-all"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center shrink-0 group-hover:bg-sky-500/20 transition-colors">
+                  <Presentation className="w-6 h-6 text-sky-400" />
+                </div>
+                <div>
+                  <h2 className="text-lg font-semibold text-slate-100 group-hover:text-sky-300 transition-colors">
+                    {p.title}
+                  </h2>
+                  <p className="text-sm text-slate-400">{p.description}</p>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-
     </main>
   );
 }

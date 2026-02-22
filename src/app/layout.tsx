@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lohnoptimo | Strategischer Relaunch & Ausführungsplan",
-  description: "Ein visionäres internes Strategie-Deck, das die ersten 3 Monate als fokussierten Geschäfts-Ausführungsplan visualisiert.",
+  title: "Praesentationen | Antigravity",
+  description: "Antigravity Praesentations-Plattform",
 };
 
 export default function RootLayout({

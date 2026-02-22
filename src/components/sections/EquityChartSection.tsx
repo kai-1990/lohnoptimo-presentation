@@ -86,11 +86,11 @@ export function EquityChartSection() {
                             Die Perspektive
                         </span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                         Skin in the Game
                     </h2>
                     <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Wir bauen Lohnoptimo gemeinsam auf. Ich übernehme das Risiko und den Aufbau – als Gegenleistung steigen meine Firmenanteile fair und transparent gebunden an die realen Jahresumsätze.
+                        Wir bauen Lohnoptimo gemeinsam auf. Ich übernehme den operativen Aufbau — und mit steigendem Umsatz wachsen auch meine Firmenanteile. Fair, transparent und gebunden an reale Ergebnisse.
                     </p>
                 </motion.div>
 

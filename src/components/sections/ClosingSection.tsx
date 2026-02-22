@@ -17,7 +17,7 @@ export function ClosingSection() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-20"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-300 to-indigo-300 mb-6">
+                    <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-300 to-indigo-300 mb-6">
                         Zusammenfassung
                     </h2>
                     <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
@@ -35,17 +35,17 @@ export function ClosingSection() {
                 >
                     <div className="glass-panel p-6 rounded-2xl text-center">
                         <Rocket className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
-                        <h3 className="text-white font-semibold mb-2">90-Tage-Plan</h3>
+                        <h3 className="text-lg text-white font-semibold mb-2">90-Tage-Plan</h3>
                         <p className="text-slate-400 text-sm">Klare Roadmap von Positionierung über Aktivierung bis Skalierung — Monat für Monat.</p>
                     </div>
                     <div className="glass-panel p-6 rounded-2xl text-center">
                         <FileText className="w-8 h-8 text-sky-400 mx-auto mb-4" />
-                        <h3 className="text-white font-semibold mb-2">Transparente Finanzen</h3>
+                        <h3 className="text-lg text-white font-semibold mb-2">Transparente Finanzen</h3>
                         <p className="text-slate-400 text-sm">Erst Kapitalrückführung, dann faire Vergütung, dann Reinvestition ins Wachstum.</p>
                     </div>
                     <div className="glass-panel p-6 rounded-2xl text-center">
                         <Handshake className="w-8 h-8 text-indigo-400 mx-auto mb-4" />
-                        <h3 className="text-white font-semibold mb-2">Partnerschaft</h3>
+                        <h3 className="text-lg text-white font-semibold mb-2">Partnerschaft</h3>
                         <p className="text-slate-400 text-sm">Equity-Modell gebunden an reale Umsätze — wir wachsen gemeinsam.</p>
                     </div>
                 </motion.div>
@@ -58,7 +58,7 @@ export function ClosingSection() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="text-center"
                 >
-                    <h3 className="text-2xl font-bold text-white mb-8">Nächste Schritte</h3>
+                    <h3 className="text-lg font-bold text-white mb-8">Nächste Schritte</h3>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                         {[
                             { icon: FileText, text: "Rahmenbedingungen klären" },

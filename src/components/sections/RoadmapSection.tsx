@@ -1,18 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ChevronRight } from "lucide-react";
 
 const roadmapData = [
     {
         month: "Monat 1",
         title: "Fundament & Positionierung",
-        priority: "Landingpage & Angebot",
+        priority: "SEO & Strategie",
         items: [
-            "Überarbeitung der Landingpage",
-            "Das Angebot klar kommunizieren",
-            "Technischer SEO-Neuaufbau",
-            "Neue Funnel-Architektur aufsetzen"
+            "Landingpage analysieren und gezielt optimieren",
+            "Technischer SEO-Neuaufbau (Struktur, Meta, Schema)",
+            "GEO-Grundlagen: Inhalte für KI-Suchmaschinen aufbereiten",
+            "Funnel-Architektur planen und aufsetzen",
+            "Software Light: MVP-Konzept und erste Entwicklung",
+            "Positionierung als Branchenexperte definieren"
         ]
     },
     {
@@ -20,21 +22,25 @@ const roadmapData = [
         title: "Aktivierung",
         priority: "Sichtbarkeit & Leads",
         items: [
-            "Social-Media-Funnel geht live",
-            "Testing von neuen Anzeigen",
-            "Erste Lead-Magneten einbauen",
-            "Erste neue Consulting-Abschlüsse"
+            "Social-Media-Funnel und erste Anzeigen live schalten",
+            "Autorität-Content und Lead-Magneten veröffentlichen",
+            "GEO: Erste Inhalte in KI-Suchmaschinen sichtbar",
+            "Software Light: Beta-Version intern testen",
+            "Erste Consulting-Anfragen über digitale Kanäle",
+            "Anzeigen-Performance messen und optimieren"
         ]
     },
     {
         month: "Monat 3",
         title: "Skalierung",
-        priority: "Konstante Routine",
+        priority: "Routine & Ergebnisse",
         items: [
-            "Laufende Funnel-Optimierung",
-            "Echte Fallstudien veröffentlichen",
-            "Verbesserung des SaaS-Onboardings",
-            "Ziel: 1–2 Projekte im Monat erreichen"
+            "Laufende Funnel- und Anzeigen-Optimierung",
+            "Echte Fallstudien als Content veröffentlichen",
+            "GEO: Als Experte in KI-Antworten zitiert werden",
+            "Software Light: Launch für erste Pilotkunden",
+            "Digitale Akademie: Erstes Webinar-Konzept erarbeiten",
+            "Ziel: 1–2 neue Beratungsprojekte pro Monat"
         ]
     }
 ];
@@ -58,7 +64,7 @@ export function RoadmapSection() {
                             Fahrplan
                         </span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                    <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 pb-2">
                         Die ersten 90 Tage im Detail
                     </h2>
                 </motion.div>
@@ -71,8 +77,18 @@ export function RoadmapSection() {
                         whileInView={{ scaleX: 1 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 1.5, ease: "easeInOut" }}
-                        className="absolute top-[28px] left-0 w-full h-[2px] bg-gradient-to-r from-emerald-500 via-sky-400 to-indigo-500 shadow-[0_0_15px_rgba(16,185,129,0.5)] hidden md:block"
+                        className="absolute top-[28px] left-0 w-[calc(100%-12px)] h-[2px] bg-gradient-to-r from-emerald-500 via-sky-400 to-indigo-500 shadow-[0_0_15px_rgba(16,185,129,0.5)] hidden md:block"
                     />
+                    {/* Pfeilspitze am Ende des Zeitstrahls */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: 1.5 }}
+                        className="absolute top-[28px] right-0 -translate-y-1/2 hidden md:block"
+                    >
+                        <ChevronRight className="w-6 h-6 text-indigo-500 drop-shadow-[0_0_8px_rgba(99,102,241,0.6)]" />
+                    </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
                         {roadmapData.map((phase, idx) => (
@@ -89,7 +105,7 @@ export function RoadmapSection() {
                                     <span className="text-xs uppercase tracking-wider text-slate-500">M{idx + 1}</span>
                                 </div>
 
-                                <h3 className="text-xl font-bold text-white mb-2 text-center md:text-left">
+                                <h3 className="text-lg font-bold text-white mb-2 text-center md:text-left">
                                     {phase.month}
                                 </h3>
                                 <p className="text-emerald-400 text-sm tracking-wide font-medium text-center md:text-left">
@@ -101,7 +117,7 @@ export function RoadmapSection() {
                                     </span>
                                 </div>
 
-                                <ul className="space-y-4">
+                                <ul className="space-y-3">
                                     {phase.items.map((item, itemIdx) => (
                                         <motion.li
                                             key={itemIdx}

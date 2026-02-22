@@ -17,7 +17,7 @@ export function CapitalLogicSection() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-24"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                         Die Finanzlogik
                     </h2>
                     <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
@@ -25,10 +25,10 @@ export function CapitalLogicSection() {
                     </p>
                 </motion.div>
 
-                {/* Animated Flow Diagram Without Boxes */}
+                {/* Flow Diagram — Linien gleiten von oben nach unten ins Bild */}
                 <div className="relative flex flex-col items-center">
 
-                    {/* Incoming Revenue */}
+                    {/* Bruttoumsatz */}
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -39,113 +39,132 @@ export function CapitalLogicSection() {
                         <div className="w-16 h-16 rounded-full glass-panel flex items-center justify-center relative shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                             <Coins className="w-8 h-8 text-emerald-400" />
                         </div>
-                        <h3 className="text-white font-semibold tracking-wide mt-4">Bruttoumsatz fließt ein</h3>
+                        <h3 className="text-lg text-white font-semibold tracking-wide mt-4">Bruttoumsatz fließt ein</h3>
                     </motion.div>
 
-                    {/* Flow Line 1 */}
-                    <div className="h-20 w-[1px] relative my-4">
+                    {/* Linie 1: Bruttoumsatz → Phase 1 */}
+                    <div className="h-20 w-[2px] my-4 overflow-hidden">
                         <motion.div
-                            initial={{ scaleY: 0, transformOrigin: "top" }}
-                            whileInView={{ scaleY: 1 }}
+                            initial={{ y: "-100%" }}
+                            whileInView={{ y: "0%" }}
                             viewport={{ once: true }}
-                            transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
-                            className="absolute inset-0 bg-gradient-to-b from-emerald-500 to-sky-500"
-                        />
-                        {/* Particle */}
-                        <motion.div
-                            animate={{ y: ["0%", "100%"] }}
-                            transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
-                            className="absolute left-1/2 -translate-x-1/2 w-[3px] h-8 bg-white shadow-[0_0_8px_#fff] rounded-full"
+                            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+                            className="w-full h-full bg-gradient-to-b from-emerald-500 to-sky-500"
                         />
                     </div>
 
-                    {/* Step 1: Repayment */}
+                    {/* Phase 1: Rückzahlung */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.8 }}
+                        transition={{ duration: 0.8, delay: 1.0 }}
                         className="flex items-center space-x-6 w-full max-w-md"
                     >
                         <div className="flex-1 h-[1px] bg-gradient-to-l from-sky-500/50 to-transparent" />
                         <div className="text-center">
-                            <p className="text-sky-400 font-bold text-xl uppercase tracking-widest mb-1">Phase 1</p>
+                            <p className="text-sky-400 font-bold text-lg uppercase tracking-widest mb-1">Phase 1</p>
                             <p className="text-slate-300 text-sm whitespace-nowrap">Rückzahlung von €30.000 Investorenkapital</p>
                         </div>
                         <div className="flex-1 h-[1px] bg-gradient-to-r from-sky-500/50 to-transparent" />
                     </motion.div>
 
-                    {/* Flow Line 2 */}
-                    <div className="h-24 w-[1px] relative my-4">
+                    {/* Linie 2: Phase 1 → Split-Node */}
+                    <div className="h-20 w-[2px] my-4 overflow-hidden">
                         <motion.div
-                            initial={{ scaleY: 0, transformOrigin: "top" }}
-                            whileInView={{ scaleY: 1 }}
+                            initial={{ y: "-100%" }}
+                            whileInView={{ y: "0%" }}
                             viewport={{ once: true }}
-                            transition={{ duration: 1, delay: 1.2, ease: "easeInOut" }}
-                            className="absolute inset-0 bg-gradient-to-b from-sky-500 to-indigo-500"
-                        />
-                        {/* Particle */}
-                        <motion.div
-                            animate={{ y: ["0%", "100%"] }}
-                            transition={{ repeat: Infinity, duration: 1.5, delay: 1, ease: "linear" }}
-                            className="absolute left-1/2 -translate-x-1/2 w-[3px] h-8 bg-sky-300 shadow-[0_0_10px_#38bdf8] rounded-full"
+                            transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
+                            className="w-full h-full bg-gradient-to-b from-sky-500 to-indigo-500"
                         />
                     </div>
 
-                    {/* Split Path Node */}
+                    {/* Split-Node */}
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 1.8 }}
-                        className="w-4 h-4 rounded-full bg-indigo-500 shadow-[0_0_15px_#6366f1] mb-8"
+                        transition={{ duration: 0.4, delay: 2.0, type: "spring" }}
+                        className="w-5 h-5 rounded-full bg-indigo-500 shadow-[0_0_15px_#6366f1]"
                     />
 
-                    {/* Step 2: Post-Payback Logic */}
-                    <div className="flex flex-col md:flex-row gap-12 md:gap-24 w-full relative">
-                        {/* Connecting horizontal line for desktop */}
+                    {/* Linie 3: Split-Node → Gabelung */}
+                    <div className="h-10 w-[2px] overflow-hidden">
                         <motion.div
-                            initial={{ scaleX: 0, transformOrigin: "center" }}
-                            whileInView={{ scaleX: 1 }}
+                            initial={{ y: "-100%" }}
+                            whileInView={{ y: "0%" }}
                             viewport={{ once: true }}
-                            transition={{ duration: 1, delay: 2, ease: "easeInOut" }}
-                            className="hidden md:block absolute top-[28px] left-[20%] right-[20%] h-[1px] bg-indigo-500/30 -z-10"
+                            transition={{ duration: 0.5, delay: 2.2, ease: "easeOut" }}
+                            className="w-full h-full bg-indigo-500/60"
                         />
+                    </div>
 
-                        {/* Salary Scales */}
+                    {/* Horizontale Gabelung (Desktop) */}
+                    <div className="hidden md:block w-1/2 h-[2px] overflow-hidden mb-6">
                         <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ x: "-50%", scaleX: 0 }}
+                            whileInView={{ x: "0%", scaleX: 1 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 2.2 }}
+                            transition={{ duration: 0.8, delay: 2.5, ease: "easeOut" }}
+                            className="w-full h-full bg-gradient-to-r from-indigo-500/60 via-indigo-400/40 to-purple-500/60"
+                        />
+                    </div>
+
+                    {/* Vertikale Gabelungslinie (Mobile) */}
+                    <div className="md:hidden h-6 w-[2px] overflow-hidden mb-4">
+                        <motion.div
+                            initial={{ y: "-100%" }}
+                            whileInView={{ y: "0%" }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: 2.5, ease: "easeOut" }}
+                            className="w-full h-full bg-indigo-500/60"
+                        />
+                    </div>
+
+                    {/* Phase 2 + Phase 3 */}
+                    <div className="flex flex-col md:flex-row gap-10 md:gap-16 w-full max-w-2xl">
+                        {/* Phase 2 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 2.8 }}
                             className="flex flex-col items-center flex-1"
                         >
-                            <div className="flex flex-col items-center mb-4">
-                                <p className="text-indigo-400 font-bold text-lg uppercase tracking-widest mb-2">Phase 2</p>
-                                <div className="w-16 h-16 rounded-full glass-panel flex items-center justify-center transition-transform hover:scale-110">
-                                    <TrendingUp className="w-8 h-8 text-indigo-400" />
-                                </div>
+                            <p className="text-indigo-400 font-bold text-lg uppercase tracking-widest mb-3">Phase 2</p>
+                            <div className="w-16 h-16 rounded-full glass-panel flex items-center justify-center mb-4 transition-transform hover:scale-110">
+                                <TrendingUp className="w-8 h-8 text-indigo-400" />
                             </div>
-                            <h4 className="text-white font-semibold mb-2 text-center">Faire Vergütung</h4>
-                            <p className="text-slate-500 text-sm text-center">Mit wachsendem wiederkehrenden Umsatz steigt auch mein zeitliches Engagement — bis zur Vollzeit-Übernahme der operativen Leitung.</p>
+                            <h4 className="text-base text-white font-semibold mb-2 text-center">Faire Vergütung</h4>
+                            <p className="text-slate-500 text-sm text-center max-w-[250px]">Mit wachsendem wiederkehrenden Umsatz steigt auch mein zeitliches Engagement — bis zur Vollzeit-Übernahme der operativen Leitung.</p>
                         </motion.div>
 
-                        {/* Marketing Reinvestment */}
+                        {/* Mobile: Verbindung Phase 2 → 3 */}
+                        <div className="md:hidden h-6 w-[2px] overflow-hidden mx-auto">
+                            <motion.div
+                                initial={{ y: "-100%" }}
+                                whileInView={{ y: "0%" }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: 3.0, ease: "easeOut" }}
+                                className="w-full h-full bg-gradient-to-b from-indigo-400/50 to-purple-400/50"
+                            />
+                        </div>
+
+                        {/* Phase 3 */}
                         <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: 2.4 }}
+                            transition={{ duration: 0.8, delay: 3.0 }}
                             className="flex flex-col items-center flex-1"
                         >
-                            <div className="flex flex-col items-center mb-4">
-                                <p className="text-purple-400 font-bold text-lg uppercase tracking-widest mb-2">Phase 3</p>
-                                <div className="w-16 h-16 rounded-full glass-panel flex items-center justify-center transition-transform hover:scale-110">
-                                    <HandCoins className="w-8 h-8 text-purple-400" />
-                                </div>
+                            <p className="text-purple-400 font-bold text-lg uppercase tracking-widest mb-3">Phase 3</p>
+                            <div className="w-16 h-16 rounded-full glass-panel flex items-center justify-center mb-4 transition-transform hover:scale-110">
+                                <HandCoins className="w-8 h-8 text-purple-400" />
                             </div>
-                            <h4 className="text-white font-semibold mb-2 text-center">Marketing-Kreislauf</h4>
-                            <p className="text-slate-500 text-sm text-center">Überschüsse gehen direkt wieder ins Ads- & SEO-Budget, um noch schneller zu wachsen.</p>
+                            <h4 className="text-base text-white font-semibold mb-2 text-center">Marketing-Kreislauf</h4>
+                            <p className="text-slate-500 text-sm text-center max-w-[250px]">Überschüsse gehen direkt wieder ins Ads- & SEO-Budget, um noch schneller zu wachsen.</p>
                         </motion.div>
                     </div>
                 </div>

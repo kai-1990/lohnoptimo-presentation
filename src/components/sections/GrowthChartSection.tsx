@@ -75,7 +75,7 @@ export function GrowthChartSection() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-white">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white">
                         Umsatzentwicklung über 12 Monate
                     </h2>
                     <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-lg">

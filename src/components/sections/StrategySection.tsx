@@ -19,7 +19,7 @@ export function StrategySection() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-24"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-indigo-300">
+                    <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-indigo-300">
                         Sichtbarkeit & System
                     </h2>
                     <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-lg">
@@ -38,8 +38,8 @@ export function StrategySection() {
                     >
                         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-sky-400/50 to-transparent" />
                         <Search className="w-10 h-10 text-sky-400 mb-6" />
-                        <h3 className="text-2xl font-bold text-white mb-4">Technisches & Content SEO</h3>
-                        <ul className="space-y-4 text-slate-400">
+                        <h3 className="text-lg font-bold text-white mb-4">Technisches & Content SEO</h3>
+                        <ul className="space-y-4 text-slate-400 text-sm">
                             <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-3 text-sky-500" />Technischer SEO-Neuaufbau</li>
                             <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-3 text-sky-500" />Autoritäts-Content-Pipelines</li>
                             <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-3 text-sky-500" />Fallstudien-Landingpages</li>
@@ -57,8 +57,8 @@ export function StrategySection() {
                     >
                         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400/50 to-transparent" />
                         <BrainCircuit className="w-10 h-10 text-purple-400 mb-6" />
-                        <h3 className="text-2xl font-bold text-white mb-4">Smarte KI-Sichtbarkeit (GEO)</h3>
-                        <ul className="space-y-4 text-slate-400">
+                        <h3 className="text-lg font-bold text-white mb-4">Smarte KI-Sichtbarkeit (GEO)</h3>
+                        <ul className="space-y-4 text-slate-400 text-sm">
                             <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-3 text-purple-500" />Präsenz in KI-Suchmaschinen (ChatGPT, Perplexity)</li>
                             <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-3 text-purple-500" />Inhalte für KIs verständlich strukturieren</li>
                             <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-3 text-purple-500" />Als Branchenexperte zitiert werden</li>
@@ -67,30 +67,49 @@ export function StrategySection() {
                     </motion.div>
                 </div>
 
-                {/* Funnel Flow Visualization */}
-                <div className="pt-12 relative flex flex-col md:flex-row flex-wrap justify-center items-center gap-4 md:gap-8">
-                    <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-slate-700 to-transparent -translate-y-1/2 -z-10" />
+                {/* Funnel Flow Visualization — Desktop: Horizontale Kette, Mobile: Vertikal */}
+                <div className="pt-12">
+                    {/* Desktop */}
+                    <div className="hidden md:flex justify-center items-center gap-2">
+                        {flowKeywords.map((word, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: idx * 0.15 }}
+                                className="flex items-center"
+                            >
+                                <div className="px-6 py-3 rounded-full bg-slate-900 border border-slate-800 text-slate-300 font-medium tracking-wide shadow-[0_4px_20px_rgba(0,0,0,0.5)] whitespace-nowrap">
+                                    {word}
+                                </div>
+                                {idx < flowKeywords.length - 1 && (
+                                    <ArrowRight className="w-5 h-5 text-slate-500 mx-2 flex-shrink-0" />
+                                )}
+                            </motion.div>
+                        ))}
+                    </div>
 
-                    {flowKeywords.map((word, idx) => (
-                        <motion.div
-                            key={idx}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: idx * 0.2 }}
-                            className="relative flex items-center"
-                        >
-                            <div className="px-6 py-3 rounded-full bg-slate-900 border border-slate-800 text-slate-300 font-medium tracking-wide shadow-[0_4px_20px_rgba(0,0,0,0.5)] whitespace-nowrap">
-                                {word}
-                            </div>
-                            {idx < flowKeywords.length - 1 && (
-                                <>
-                                    <ArrowRight className="w-5 h-5 text-slate-600 ml-4 md:ml-8 hidden md:block" />
-                                    <ArrowRight className="w-4 h-4 text-slate-600 rotate-90 md:hidden absolute -bottom-3 left-1/2 -translate-x-1/2" />
-                                </>
-                            )}
-                        </motion.div>
-                    ))}
+                    {/* Mobile */}
+                    <div className="flex flex-col items-center gap-3 md:hidden">
+                        {flowKeywords.map((word, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: idx * 0.15 }}
+                                className="flex flex-col items-center"
+                            >
+                                <div className="px-6 py-3 rounded-full bg-slate-900 border border-slate-800 text-slate-300 font-medium tracking-wide shadow-[0_4px_20px_rgba(0,0,0,0.5)] whitespace-nowrap">
+                                    {word}
+                                </div>
+                                {idx < flowKeywords.length - 1 && (
+                                    <ArrowRight className="w-4 h-4 text-slate-600 rotate-90 mt-1" />
+                                )}
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </div>
 
