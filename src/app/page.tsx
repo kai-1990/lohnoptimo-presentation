@@ -7,6 +7,11 @@ const presentations = [
     description: "Strategischer Relaunch & Ausführungsplan",
     href: "/lohnoptimo",
   },
+  {
+    title: "Arinna Mosaik",
+    description: "Handgefertigte Glaskunst — Website-Entwurf",
+    href: "/arina-mosaik",
+  },
 ];
 
 export default function Home() {
