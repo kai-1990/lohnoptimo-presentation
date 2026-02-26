@@ -4,12 +4,12 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: "/arina-mosaik",
-        destination: "https://arina-mosaik.vercel.app/arina-mosaik",
+        source: "/arinna-mosaik",
+        destination: "https://arinna-mosaik.vercel.app/arinna-mosaik",
       },
       {
-        source: "/arina-mosaik/:path*",
-        destination: "https://arina-mosaik.vercel.app/arina-mosaik/:path*",
+        source: "/arinna-mosaik/:path*",
+        destination: "https://arinna-mosaik.vercel.app/arinna-mosaik/:path*",
       },
     ];
   },

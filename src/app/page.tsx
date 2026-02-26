@@ -10,7 +10,7 @@ const presentations = [
   {
     title: "Arinna Mosaik",
     description: "Handgefertigte Glaskunst — Website-Entwurf",
-    href: "/arina-mosaik",
+    href: "/arinna-mosaik",
   },
 ];
 
