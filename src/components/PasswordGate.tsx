@@ -23,7 +23,7 @@ export function PasswordGate({
   children,
   passwordHash,
   storageKey,
-  title = "Zugang geschuetzt",
+  title = "Zugang geschützt",
 }: PasswordGateProps) {
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -31,7 +31,7 @@ export function PasswordGate({
   const [error, setError] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
-  // Beim Laden pruefen ob Session bereits autorisiert
+  // Beim Laden prüfen ob Session bereits autorisiert
   useEffect(() => {
     const stored = sessionStorage.getItem(storageKey);
     if (stored === "authorized") {

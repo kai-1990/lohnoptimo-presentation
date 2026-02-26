@@ -32,7 +32,7 @@ export function EcosystemSection() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-24"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-sky-300">
+                    <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-sky-300">
                         Unsere Umsatz-Hebel
                     </h2>
                     <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-lg">
@@ -62,14 +62,14 @@ export function EcosystemSection() {
                             whileInView={{ scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: 1.0, type: "spring" }}
-                            className="absolute -top-1 -right-1 bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-[0_0_15px_rgba(16,185,129,0.5)]"
+                            className="absolute -top-1 -right-1 bg-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-[0_0_15px_rgba(16,185,129,0.5)]"
                         >
                             Neu
                         </motion.span>
                         <div className="mt-5 flex flex-col items-center text-center">
                             <h3 className="text-lg font-bold text-white mb-1 leading-tight">Software<br />Lightversion</h3>
-                            <p className="text-emerald-400 font-mono text-[10px] tracking-wider mb-2">EINSTIEG</p>
-                            <p className="text-slate-400 text-sm max-w-[170px]">Neue Erlösquelle: Self-Service-Tool zur Prämienberechnung ohne 1:1-Beratung.</p>
+                            <p className="text-emerald-400 font-mono text-xs tracking-wider mb-2">EINSTIEG</p>
+                            <p className="text-slate-400 text-base max-w-[170px]">Neue Erlösquelle: Self-Service-Tool zur Prämienberechnung ohne 1:1-Beratung.</p>
                         </div>
                     </motion.div>
 
@@ -96,8 +96,8 @@ export function EcosystemSection() {
                         </div>
                         <div className="mt-5 flex flex-col items-center text-center">
                             <h3 className="text-lg font-semibold text-white mb-1 leading-tight">Software<br />Premium</h3>
-                            <p className="text-sky-400 font-mono text-[10px] tracking-wider mb-2">UPGRADE</p>
-                            <p className="text-slate-500 text-sm max-w-[160px]">Dashboards, Analysen & API-Schnittstellen für große Kunden.</p>
+                            <p className="text-sky-400 font-mono text-xs tracking-wider mb-2">UPGRADE</p>
+                            <p className="text-slate-500 text-base max-w-[160px]">Dashboards, Analysen & API-Schnittstellen für große Kunden.</p>
                         </div>
                     </motion.div>
 
@@ -125,8 +125,8 @@ export function EcosystemSection() {
                         </div>
                         <div className="mt-5 flex flex-col items-center text-center">
                             <h3 className="text-lg font-bold text-white mb-1 leading-tight">Lohnoptimierung<br />Projekte</h3>
-                            <p className="text-indigo-400 font-mono text-[10px] tracking-wider mb-2">KERNBERATUNG</p>
-                            <p className="text-slate-400 text-sm max-w-[170px]">Unser Kerngeschäft. Software als Einstieg, Beratung als Upsell.</p>
+                            <p className="text-indigo-400 font-mono text-xs tracking-wider mb-2">KERNBERATUNG</p>
+                            <p className="text-slate-400 text-base max-w-[170px]">Unser Kerngeschäft. Software als Einstieg, Beratung als Upsell.</p>
                         </div>
                     </motion.div>
 
@@ -153,8 +153,8 @@ export function EcosystemSection() {
                         </div>
                         <div className="mt-5 flex flex-col items-center text-center">
                             <h3 className="text-lg font-semibold text-white mb-1 leading-tight">Digitale<br />Akademie</h3>
-                            <p className="text-purple-400 font-mono text-[10px] tracking-wider mb-2">SKALIERUNG</p>
-                            <p className="text-slate-500 text-sm max-w-[160px]">Seminare und Web-Trainings. Bindet Kunden ohne 1:1 Aufwand.</p>
+                            <p className="text-purple-400 font-mono text-xs tracking-wider mb-2">SKALIERUNG</p>
+                            <p className="text-slate-500 text-base max-w-[160px]">Seminare und Web-Trainings. Bindet Kunden ohne 1:1 Aufwand.</p>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -173,11 +173,11 @@ export function EcosystemSection() {
                             <div className="absolute inset-0 rounded-full border border-emerald-500/30 animate-[spin_10s_linear_infinite]" />
                             <Smartphone className="w-11 h-11 text-emerald-400" />
                         </div>
-                        <span className="absolute -top-1 right-[10%] bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Neu</span>
+                        <span className="absolute -top-1 right-[10%] bg-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Neu</span>
                         <div className="mt-4 text-center">
                             <h3 className="text-lg font-bold text-white mb-1">Software Lightversion</h3>
-                            <p className="text-emerald-400 font-mono text-[10px] tracking-wider mb-2">EINSTIEG</p>
-                            <p className="text-slate-400 text-sm max-w-[200px]">Neue Erlösquelle: Self-Service-Tool zur Prämienberechnung ohne 1:1-Beratung.</p>
+                            <p className="text-emerald-400 font-mono text-xs tracking-wider mb-2">EINSTIEG</p>
+                            <p className="text-slate-400 text-base max-w-[200px]">Neue Erlösquelle: Self-Service-Tool zur Prämienberechnung ohne 1:1-Beratung.</p>
                         </div>
                     </motion.div>
 
@@ -190,8 +190,8 @@ export function EcosystemSection() {
                         </div>
                         <div className="mt-4 text-center">
                             <h3 className="text-lg font-semibold text-white mb-1">Software Premium</h3>
-                            <p className="text-sky-400 font-mono text-[10px] tracking-wider mb-2">UPGRADE</p>
-                            <p className="text-slate-500 text-sm max-w-[180px]">Dashboards, Analysen & API-Schnittstellen für große Kunden.</p>
+                            <p className="text-sky-400 font-mono text-xs tracking-wider mb-2">UPGRADE</p>
+                            <p className="text-slate-500 text-base max-w-[180px]">Dashboards, Analysen & API-Schnittstellen für große Kunden.</p>
                         </div>
                     </motion.div>
 
@@ -205,8 +205,8 @@ export function EcosystemSection() {
                         </div>
                         <div className="mt-4 text-center">
                             <h3 className="text-lg font-bold text-white mb-1">Lohnoptimierung Projekte</h3>
-                            <p className="text-indigo-400 font-mono text-[10px] tracking-wider mb-2">KERNBERATUNG</p>
-                            <p className="text-slate-400 text-sm max-w-[200px]">Unser Kerngeschäft. Software als Einstieg, Beratung als Upsell.</p>
+                            <p className="text-indigo-400 font-mono text-xs tracking-wider mb-2">KERNBERATUNG</p>
+                            <p className="text-slate-400 text-base max-w-[200px]">Unser Kerngeschäft. Software als Einstieg, Beratung als Upsell.</p>
                         </div>
                     </motion.div>
 
@@ -219,8 +219,8 @@ export function EcosystemSection() {
                         </div>
                         <div className="mt-4 text-center">
                             <h3 className="text-lg font-semibold text-white mb-1">Digitale Akademie</h3>
-                            <p className="text-purple-400 font-mono text-[10px] tracking-wider mb-2">SKALIERUNG</p>
-                            <p className="text-slate-500 text-sm max-w-[180px]">Seminare und Web-Trainings. Bindet Kunden ohne 1:1 Aufwand.</p>
+                            <p className="text-purple-400 font-mono text-xs tracking-wider mb-2">SKALIERUNG</p>
+                            <p className="text-slate-500 text-base max-w-[180px]">Seminare und Web-Trainings. Bindet Kunden ohne 1:1 Aufwand.</p>
                         </div>
                     </motion.div>
                 </motion.div>

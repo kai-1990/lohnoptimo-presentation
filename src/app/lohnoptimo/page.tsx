@@ -20,7 +20,7 @@ export default function LohnoptimoPage() {
     <PasswordGate
       passwordHash={PASSWORD_HASH}
       storageKey="lohnoptimo-auth"
-      title="Lohnoptimo Praesentation"
+      title="Lohnoptimo Präsentation"
     >
       <main className="min-h-screen bg-[#020617] text-slate-100 overflow-x-hidden selection:bg-sky-500/30 selection:text-sky-100">
         <ScrollProgress />

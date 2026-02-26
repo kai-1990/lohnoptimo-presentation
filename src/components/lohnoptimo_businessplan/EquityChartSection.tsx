@@ -82,15 +82,15 @@ export function EquityChartSection() {
                     className="text-center mb-16"
                 >
                     <div className="flex items-center space-x-2 justify-center mb-4">
-                        <span className="text-emerald-400 text-sm tracking-widest uppercase font-semibold">
-                            Die Perspektive
+                        <span className="text-emerald-400 text-base tracking-widest uppercase font-semibold">
+                            Anteilsmodell
                         </span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                        Skin in the Game
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                        Mein Anteil am Erfolg
                     </h2>
                     <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Wir bauen Lohnoptimo gemeinsam auf. Ich übernehme den operativen Aufbau — und mit steigendem Umsatz wachsen auch meine Firmenanteile. Fair, transparent und gebunden an reale Ergebnisse.
+                        Ich übernehme den operativen Aufbau — und mit steigendem Umsatz wächst mein Anteil an Lohnoptimo. Kein Fixgehalt, keine leeren Versprechen. Nur echte Beteiligung an echten Ergebnissen.
                     </p>
                 </motion.div>
 
@@ -111,13 +111,13 @@ export function EquityChartSection() {
                                 dataKey="revenue"
                                 stroke="#64748b"
                                 tickFormatter={(val) => `${val}k €`}
-                                tick={{ fill: "#94a3b8" }}
+                                tick={{ fill: "#94a3b8", fontSize: 13 }}
                                 dy={10}
                             />
                             <YAxis
                                 stroke="#64748b"
                                 tickFormatter={(val) => `${val}%`}
-                                tick={{ fill: "#94a3b8" }}
+                                tick={{ fill: "#94a3b8", fontSize: 13 }}
                                 dx={-10}
                                 domain={[0, 60]}
                             />
@@ -145,16 +145,16 @@ export function EquityChartSection() {
                     {/* Floating Milestone Labels for larger screens */}
                     <div className="absolute top-[75%] left-[22%] hidden md:flex flex-col items-center">
                         <span className="text-emerald-400 font-bold text-sm">10%</span>
-                        <span className="text-slate-500 text-xs mt-1">50.000 € Umsatz</span>
+                        <span className="text-slate-500 text-sm mt-1">50.000 € Umsatz</span>
                     </div>
                     <div className="absolute top-[52%] left-[45%] hidden md:flex flex-col items-center">
                         <span className="text-emerald-400 font-bold text-sm">25%</span>
-                        <span className="text-slate-500 text-xs mt-1">150.000 € Umsatz</span>
+                        <span className="text-slate-500 text-sm mt-1">150.000 € Umsatz</span>
                     </div>
                     <div className="absolute top-[16%] left-[82%] hidden md:flex flex-col items-center">
                         <span className="text-purple-400 font-bold text-lg drop-shadow-lg">49%</span>
-                        <span className="text-slate-400 text-xs mt-1 font-semibold">300.000 € Umsatz</span>
-                        <span className="text-slate-500 text-[10px]">Partnerschaft auf Augenhöhe</span>
+                        <span className="text-slate-400 text-sm mt-1 font-semibold">300.000 € Umsatz</span>
+                        <span className="text-slate-500 text-xs">Partnerschaft auf Augenhöhe</span>
                     </div>
 
                 </motion.div>

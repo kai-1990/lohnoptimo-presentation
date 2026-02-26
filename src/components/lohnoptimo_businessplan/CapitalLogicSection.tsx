@@ -17,11 +17,11 @@ export function CapitalLogicSection() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-24"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                         Die Finanzlogik
                     </h2>
                     <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Wir arbeiten wirtschaftlich sicher: Erst holen wir das Anfangsinvestment von 30.000 € wieder rein. Danach skalieren wir profitabel und investieren weiter ins Wachstum.
+                        Die Reihenfolge ist klar: Zuerst läuft das Anfangsinvestment von 30.000 € vollständig zurück. Dann kommen faire Vergütung und gezielte Reinvestition ins Wachstum.
                     </p>
                 </motion.div>
 
@@ -64,7 +64,7 @@ export function CapitalLogicSection() {
                         <div className="flex-1 h-[1px] bg-gradient-to-l from-sky-500/50 to-transparent" />
                         <div className="text-center">
                             <p className="text-sky-400 font-bold text-lg uppercase tracking-widest mb-1">Phase 1</p>
-                            <p className="text-slate-300 text-sm whitespace-nowrap">Rückzahlung von €30.000 Investorenkapital</p>
+                            <p className="text-slate-300 text-base whitespace-nowrap">Rückzahlung von €30.000 Investorenkapital</p>
                         </div>
                         <div className="flex-1 h-[1px] bg-gradient-to-r from-sky-500/50 to-transparent" />
                     </motion.div>
@@ -137,7 +137,7 @@ export function CapitalLogicSection() {
                                 <TrendingUp className="w-8 h-8 text-indigo-400" />
                             </div>
                             <h4 className="text-base text-white font-semibold mb-2 text-center">Faire Vergütung</h4>
-                            <p className="text-slate-500 text-sm text-center max-w-[250px]">Mit wachsendem wiederkehrenden Umsatz steigt auch mein zeitliches Engagement — bis zur Vollzeit-Übernahme der operativen Leitung.</p>
+                            <p className="text-slate-500 text-base text-center max-w-[250px]">Mit wachsendem wiederkehrenden Umsatz steigt auch mein zeitliches Engagement — bis zur Vollzeit-Übernahme der operativen Leitung.</p>
                         </motion.div>
 
                         {/* Mobile: Verbindung Phase 2 → 3 */}
@@ -164,7 +164,7 @@ export function CapitalLogicSection() {
                                 <HandCoins className="w-8 h-8 text-purple-400" />
                             </div>
                             <h4 className="text-base text-white font-semibold mb-2 text-center">Marketing-Kreislauf</h4>
-                            <p className="text-slate-500 text-sm text-center max-w-[250px]">Überschüsse gehen direkt wieder ins Ads- & SEO-Budget, um noch schneller zu wachsen.</p>
+                            <p className="text-slate-500 text-base text-center max-w-[250px]">Überschüsse gehen direkt wieder ins Ads- & SEO-Budget, um noch schneller zu wachsen.</p>
                         </motion.div>
                     </div>
                 </div>

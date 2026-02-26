@@ -46,14 +46,14 @@ const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
             <div className="glass-panel p-4 rounded-xl border border-slate-800 shadow-2xl">
                 <p className="text-slate-300 font-semibold mb-2">{label}</p>
                 <p className="text-sky-400 text-sm">
-                    SaaS MRR: €{payload[0].payload.saas.toLocaleString()}
+                    Software: €{payload[0].payload.saas.toLocaleString()}
                 </p>
                 <p className="text-indigo-400 text-sm mb-2">
-                    Consulting: €{payload[0].payload.consulting.toLocaleString()}
+                    Beratung: €{payload[0].payload.consulting.toLocaleString()}
                 </p>
                 <div className="w-full h-[1px] bg-slate-700 my-2" />
                 <p className="text-white font-bold">
-                    Kumuliert: €{payload[0].value.toLocaleString()}
+                    Gesamt: €{payload[0].value.toLocaleString()}
                 </p>
             </div>
         );
@@ -75,7 +75,7 @@ export function GrowthChartSection() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white">
                         Umsatzentwicklung über 12 Monate
                     </h2>
                     <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-lg">
@@ -84,7 +84,7 @@ export function GrowthChartSection() {
                 </motion.div>
 
                 {/* Phase Indicators */}
-                <div className="flex justify-between items-end mb-8 px-4 md:px-12 text-sm uppercase tracking-wider font-semibold">
+                <div className="flex justify-between items-end mb-8 px-4 md:px-12 text-base uppercase tracking-wider font-semibold">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -92,7 +92,7 @@ export function GrowthChartSection() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-slate-500"
                     >
-                        Investoren-Rückzahlungsphase
+                        Aufbau & Rückzahlung
                     </motion.div>
 
                     <motion.div
@@ -129,13 +129,13 @@ export function GrowthChartSection() {
                                 dataKey="month"
                                 axisLine={false}
                                 tickLine={false}
-                                tick={{ fill: "#64748b", fontSize: 12 }}
+                                tick={{ fill: "#64748b", fontSize: 13 }}
                                 dy={10}
                             />
                             <YAxis
                                 axisLine={false}
                                 tickLine={false}
-                                tick={{ fill: "#64748b", fontSize: 12 }}
+                                tick={{ fill: "#64748b", fontSize: 13 }}
                                 tickFormatter={(value) => `€${value / 1000}k`}
                                 dx={-10}
                             />
@@ -146,7 +146,7 @@ export function GrowthChartSection() {
                                 y={30000}
                                 stroke="#818cf8"
                                 strokeDasharray="4 4"
-                                label={{ position: 'insideTopLeft', value: '€30.000 Break-Even / Payback', fill: '#818cf8', fontSize: 12, className: 'tracking-wider drop-shadow-lg font-mono' }}
+                                label={{ position: 'insideTopLeft', value: '€30.000 Break-Even / Payback', fill: '#818cf8', fontSize: 13, className: 'tracking-wider drop-shadow-lg font-mono' }}
                             />
 
                             <Area

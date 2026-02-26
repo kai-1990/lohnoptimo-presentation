@@ -18,7 +18,7 @@ export function HeroSection() {
                     className="flex items-center space-x-2 mb-6"
                 >
                     <div className="w-8 h-[1px] bg-sky-400" />
-                    <span className="text-sky-400 text-sm tracking-widest uppercase font-semibold">
+                    <span className="text-sky-400 text-base tracking-widest uppercase font-semibold">
                         GEMEINSAMER NEUSTART
                     </span>
                 </motion.div>
@@ -41,7 +41,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8 text-slate-400 text-base max-w-5xl"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8 text-slate-400 text-lg max-w-5xl"
                 >
                     <div className="flex flex-col items-start space-y-3">
                         <Zap className="w-6 h-6 text-sky-400 shrink-0" />
@@ -64,7 +64,7 @@ export function HeroSection() {
                     transition={{ duration: 1, delay: 1.2 }}
                     className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer"
                 >
-                    <p className="text-xs text-slate-500 uppercase tracking-widest mb-2">Entdecken</p>
+                    <p className="text-sm text-slate-500 uppercase tracking-widest mb-2">Entdecken</p>
                     <motion.div
                         animate={{ y: [0, 8, 0] }}
                         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}

@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Praesentationen | Antigravity",
-  description: "Antigravity Praesentations-Plattform",
+  title: "Präsentationen | Kai Namyslo",
+  description: "Präsentationen Kai Namyslo",
 };
 
 export default function RootLayout({

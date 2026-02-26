@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Lohnoptimo | Strategischer Relaunch & Ausfuehrungsplan",
+  title: "Lohnoptimo | Strategischer Relaunch & Ausführungsplan",
   description:
-    "Ein visionaeres internes Strategie-Deck, das die ersten 3 Monate als fokussierten Geschaefts-Ausfuehrungsplan visualisiert.",
+    "Ein visionäres internes Strategie-Deck, das die ersten 3 Monate als fokussierten Geschäfts-Ausführungsplan visualisiert.",
 };
 
 export default function LohnoptimoLayout({

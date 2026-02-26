@@ -19,11 +19,11 @@ export function StrategySection() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-24"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-indigo-300">
+                    <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-indigo-300">
                         Sichtbarkeit & System
                     </h2>
                     <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-lg">
-                        Lohnoptimo nachhaltig als Marktführer etablieren, gefunden werden und messbar abschließen.
+                        Lohnoptimo als erste Adresse in seiner Nische positionieren — dauerhaft sichtbar, klar differenziert und messbar wirksam.
                     </p>
                 </motion.div>
 
@@ -38,8 +38,8 @@ export function StrategySection() {
                     >
                         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-sky-400/50 to-transparent" />
                         <Search className="w-10 h-10 text-sky-400 mb-6" />
-                        <h3 className="text-lg font-bold text-white mb-4">Technisches & Content SEO</h3>
-                        <ul className="space-y-4 text-slate-400 text-sm">
+                        <h3 className="text-xl font-bold text-white mb-4">Technisches & Content SEO</h3>
+                        <ul className="space-y-4 text-slate-400 text-base">
                             <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-3 text-sky-500" />Technischer SEO-Neuaufbau</li>
                             <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-3 text-sky-500" />Autoritäts-Content-Pipelines</li>
                             <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-3 text-sky-500" />Fallstudien-Landingpages</li>
@@ -57,8 +57,8 @@ export function StrategySection() {
                     >
                         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400/50 to-transparent" />
                         <BrainCircuit className="w-10 h-10 text-purple-400 mb-6" />
-                        <h3 className="text-lg font-bold text-white mb-4">Smarte KI-Sichtbarkeit (GEO)</h3>
-                        <ul className="space-y-4 text-slate-400 text-sm">
+                        <h3 className="text-xl font-bold text-white mb-4">Smarte KI-Sichtbarkeit (GEO)</h3>
+                        <ul className="space-y-4 text-slate-400 text-base">
                             <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-3 text-purple-500" />Präsenz in KI-Suchmaschinen (ChatGPT, Perplexity)</li>
                             <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-3 text-purple-500" />Inhalte für KIs verständlich strukturieren</li>
                             <li className="flex items-center"><ArrowRight className="w-4 h-4 mr-3 text-purple-500" />Als Branchenexperte zitiert werden</li>

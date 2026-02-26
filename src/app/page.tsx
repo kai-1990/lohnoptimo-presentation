@@ -4,7 +4,7 @@ import { Presentation } from "lucide-react";
 const presentations = [
   {
     title: "Lohnoptimo",
-    description: "Strategischer Relaunch & Ausfuehrungsplan",
+    description: "Strategischer Relaunch & Ausführungsplan",
     href: "/lohnoptimo",
   },
 ];
@@ -13,12 +13,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center px-4">
       <div className="w-full max-w-2xl">
-        <h1 className="text-3xl font-bold text-center mb-2">
-          Praesentationen
+        <h1 className="text-3xl font-bold text-center mb-12">
+          Präsentationen Kai Namyslo
         </h1>
-        <p className="text-slate-400 text-center mb-12">
-          Antigravity Strategie-Decks
-        </p>
+
 
         <div className="grid gap-4">
           {presentations.map((p) => (
